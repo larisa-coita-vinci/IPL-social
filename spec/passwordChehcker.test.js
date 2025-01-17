@@ -30,3 +30,13 @@ describe('Password No IPL Validation', () => {
     expect(passwordNoIPLChecker('longipl')).toBe(false);
   });
 });
+
+describe('Comprehensive Password Validation', () => {
+  it('should pass all validation checks', () => {
+    const validPassword = 'Valid@123';
+    expect(passwordChecker(validPassword)).toBe(true);
+    expect(passwordSpecialCharChecker(validPassword)).toBe(true);
+    expect(passwordDigitChecker(validPassword)).toBe(true);
+    expect(passwordNoIPLChecker(validPassword)).toBe(true);
+  });
+});
