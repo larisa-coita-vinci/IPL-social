@@ -14,8 +14,14 @@ function passwordDigitChecker(password) {
     return digitPattern.test(password);
 }
 
+function passwordNoIPLChecker(password) {
+    const iplPattern = /ipl/i;
+    return !iplPattern.test(password);
+}
+
 module.exports = {
     passwordChecker,
     passwordSpecialCharChecker,
-    passwordDigitChecker
+    passwordDigitChecker,
+    passwordNoIPLChecker
 };
