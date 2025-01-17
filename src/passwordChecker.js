@@ -9,7 +9,13 @@ function passwordSpecialCharChecker(password) {
     return specialCharPattern.test(password);
 }
 
+function passwordDigitChecker(password) {
+    const digitPattern = /\d/;
+    return digitPattern.test(password);
+}
+
 module.exports = {
     passwordChecker,
-    passwordSpecialCharChecker
+    passwordSpecialCharChecker,
+    passwordDigitChecker
 };
